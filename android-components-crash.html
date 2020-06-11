@@ -1,0 +1,2455 @@
+<!DOCTYPE html> <html class=production data-google-analytics-id=UA-35433268-50 lang=en-US><!--
+ Page saved with SingleFile 
+ url: https://crash-stats.mozilla.org/report/index/4f5052b1-676e-4561-9c8e-c56030200611 
+ saved date: Thu Jun 11 2020 14:23:33 GMT-0700 (Pacific Daylight Time)
+--><meta charset=utf-8>
+<title>[@ java.lang.IllegalStateException: at mozilla.components.feature.qr.QrFragment.openCamera$feature_qr_release(QrFragment.kt:9)] - Fenix 77.0.0-beta.2 Crash Report - Report ID: 4f5052b1-676e-4561-9c8e-c56030200611</title>
+<style>*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}body,div,ul,li,h2,h3,pre,code,form,input,p,th,td{margin:0;padding:0}a:active,a:hover,a:focus{outline:0}table{border-collapse:collapse;border-spacing:0}code,b,th{font-style:normal;font-weight:normal}li{list-style:none}input,select{font-family:inherit;font-weight:inherit;font-size:100%}table tbody tr{z-index:50}table tbody tr td{border:solid 1px #b1b1b3}table.data-table{width:100%}table.data-table tr:nth-child(even),table.zebra tr:nth-child(even){background-color:rgba(12,12,13,0.1)}table.data-table tr:nth-child(odd),table.zebra tr:nth-child(odd){background-color:rgba(12,12,13,0.025)}table.data-table tr:hover,table.zebra tr:hover{background-color:#d7d7db}table th{background-color:rgba(12,12,13,0.2)}table th,table td{padding:.5em}table tbody{background-color:#fff}table.vertical th{border:1px solid #0f1126;font-weight:bold}table.hardwrapped td{overflow-wrap:anywhere}html,body{font-weight:300;letter-spacing:.01em}h2,h3{font-weight:200;letter-spacing:0;line-height:1.25em;margin-bottom:.5em}h3{font-size:24px}p{margin:1em 0 1em 0;font-weight:normal}b{font-weight:bold}html{background:#f2f6f9;color:#4a4a4f;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:1.7;padding:0}html.production{margin:0}html.production .page-heading{margin:1em 1em 1em;display:flex;align-items:center}html.production .page-heading h2{flex-grow:1;margin:0}html.production .panel{margin:1em}body{display:flex;flex-direction:column;height:100vh}.page-header{position:relative;min-height:64px;height:64px;background-color:#002275;display:flex;align-items:center}.page-header>*{margin:0 .5em}.page-header>*:first-child{margin-left:0}.page-header>*:last-child{margin-right:0}.page-header .title{flex:1;border:0;color:#fff;display:block;text-decoration:none;font-size:2em;font-weight:200;height:100%;letter-spacing:.03em;padding-left:.5em;line-height:64px}.page-header #simple_search{flex:0 0 auto}.page-header #simple_search label{color:#fff}.page-header #simple_search input{background:#fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAU1JREFUeNqU080rRFEYx/Ez40oW4y0WkyyU8pIVC1b+AKVMbKTIBktLsrDytlAUzZhMTWwshqVi4bKShfgTRGODpNgo8j31ozvHmGme+vQ0zTm/c1+eG/J936hCGMQoelCLOxxjF9cmT4XVI0jjEEOIogztmIE9Zfq/gApsYQwvmEcLGtCLfVQjrqv7E9CvPx4QwxJu8YZLjGBO61dR7wZMqK/j3OSvFZyhEcNuQDc+cWAKV0a9yw2IKOCpSMCjepUbkEU52ooEdKhn3YATzcBkgc11ektGc5ETYIfkVQtm9f6D1aQZacaNDswJuNJGexvLONXQ2IFawAUGtL7VHShPPYF3LKJPgmXHuBOV2Ajs+Q2wtYcjfQ/2W6jBve7ZjvI4NjW58Z8QzznpGSlxa0fPJ6HfdvA+wqa02saU3agrWfNM6ZXElx545luAAQCxcEILqi9O+QAAAABJRU5ErkJggg==) no-repeat 5px center;border:0;width:212px;padding:3px 4px 4px 28px;font-size:12px;color:#4a4a4f;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.page-header #simple_search input:-moz-placeholder{color:#d7d7db}.page-header .user-info{flex:0 0 auto;height:100%;display:flex;align-items:center;font-size:14px}.page-header .user-info .sign-in-link{color:#f2f6f9;padding:0 1em}.page-heading h2{display:inline;font-size:21px}.protected-info{align-items:center;margin:1em 1em 1em}.version-nav{font-size:12px;background:transparent repeat-x left top;position:relative;background-color:#0060df;color:#f2f6f9;padding:.5em 1rem;line-height:32px}.version-nav a,.version-nav a:link,.version-nav a:hover,.version-nav a:active,.version-nav a:visited{color:#f2f6f9}.version-nav .filter{display:inline}.version-nav .filter li{display:inline;padding:0}.version-nav .filter li:last-child{border-left:1px solid #0a84ff;margin-left:.5em;padding-left:.8em}.version-nav .filter optgroup{border-top:1px solid #d7d7db;padding:.5em 0}.version-nav .filter optgroup:first-child{border-top:0;padding-top:0}.version-nav .filter optgroup:last-child{padding-bottom:0}.version-nav .filter option{padding-left:0}.version-nav .quick-nav-title{display:inline-block;margin-right:1em}.version-nav .nav-links{display:inline;float:right}.page-footer{background:#d7d7db;color:#4a4a4f;border-top:1px solid #b1b1b3;margin:40px 0 0 0;padding:10px 20px}.page-footer a:link,.page-footer a:hover,.page-footer a:active,.page-footer a:visited{color:#0060df;text-decoration:none}.page-footer a:hover{text-decoration:underline}.page-footer .nav{background:url(data:image/gif;base64,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) no-repeat scroll 0 -1px transparent;background-size:102px auto;float:left;padding-left:109px}.page-footer ul{display:inline}.page-footer li{display:inline;padding:0 .5em;border-left:1px solid #b1b1b3;list-style:none}.page-footer li:first-child{border-left:0;padding-left:0}div.code{background-color:#fff;border:1px solid #d7d7db;font-family:monospace;width:100%;height:480px;white-space:pre;overflow:auto}.panel{color:#0f1126;-webkit-box-shadow:0 1px 4px 0 rgba(12,12,13,0.1);-moz-box-shadow:0 1px 4px 0 rgba(12,12,13,0.1);box-shadow:0 1px 4px 0 rgba(12,12,13,0.1)}.panel .body{background:#fff;padding:1em;min-height:4em}select{-moz-appearance:none;-webkit-appearance:none;cursor:pointer;border:0;background:#d7d7db;color:#0f1126;padding:.2em 2em .2em .2em;margin:0;border-radius:2px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAuODExIDI0MC44MTEiPjxwYXRoIGZpbGw9InJnYmEoMCwwLDAsMC44KSIgZD0iTTIyMC4wODggNTcuNjY3bC05OS42NzEgOTkuNjk1LTk5LjY3MS05OS43MDdjLTQuNzUyLTQuNzUyLTEyLjQzOS00Ljc1Mi0xNy4xOTEgMC00Ljc0IDQuNzUyLTQuNzQgMTIuNDUxIDAgMTcuMjAzbDEwOC4yNjEgMTA4LjI5N2M0Ljc0IDQuNzUyIDEyLjQzOSA0Ljc1MiAxNy4xNzkgMEwyMzcuMjU2IDc0Ljg1OWM0Ljc0LTQuNzUyIDQuNzQtMTIuNDYzIDAtMTcuMjE1LTQuNzI4LTQuNzI5LTEyLjQyOC00LjcyOS0xNy4xNjguMDIzeiIvPjwvc3ZnPgo=);background-position:calc(100% - 7px) calc(50% + 1px);background-size:8px;background-repeat:no-repeat}select:hover{background-color:#b1b1b3}select:active{background-color:#737373}select:focus{background-color:#fff}select optgroup,select option{background-color:#fff}#sumo-link{float:right}#sumo-link a{background-color:#0060df;padding:.8em;border:0;cursor:pointer;border-radius:4px;text-align:right;margin:0 auto 10px}#sumo-link a:hover,#sumo-link a:focus{background:#003eaa}#sumo-link a:active{background:#002275}#sumo-link a{color:#fff;text-decoration:none}#sumo-link a:hover,#sumo-link a:focus{background:#003eaa}#sumo-link a:active{background:#002275}a,a:link,a:hover,a:active{color:#0060df;text-decoration:underline}.ui-widget-content a:visited,a:visited{color:#8000d7}.clear{clear:both}.visually-hidden{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}time{display:inline-block}#mainbody{position:relative;margin:1em 2em;text-align:left;flex:1}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-reset{outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-tabs{position:relative;padding:.2em}.ui-tabs .ui-tabs-nav{margin:0;padding:.2em .2em 0}.ui-tabs .ui-tabs-nav li{list-style:none;float:left;position:relative;top:0;margin:1px .2em 0 0;border-bottom-width:0;padding:0;white-space:nowrap}.ui-tabs .ui-tabs-nav .ui-tabs-anchor{float:left;padding:.5em 1em;text-decoration:none}.ui-tabs .ui-tabs-nav li.ui-tabs-active{margin-bottom:-1px;padding-bottom:1px}.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{cursor:text}.ui-tabs .ui-tabs-panel{display:block;padding:1em 1.4em;background:0}.ui-widget{font-family:Arial,Helvetica,sans-serif;font-size:12px}.ui-widget-content{border:1px solid #edecec;background:#fcfdfd url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABkAQMAAADOquA5AAAAA1BMVEX8/f15uqY/AAAACXBIWXMAAABIAAAASABGyWs+AAAAD0lEQVQoz2NgGAWjgPoAAAJYAAF1NoZ3AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA4LTEyVDA1OjMzOjM1LTA3OjAw17yimwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wOC0xMlQwNTozMzozNS0wNzowMKbhGicAAAAASUVORK5CYII=) 50% 50% repeat-x;color:#222}.ui-widget-content a{color:#03F}.ui-widget-header{border:0;background:0;color:#333;font-weight:bold}.ui-widget-content .ui-state-default{border:1px solid #9fa1a2;background:#9fa1a2 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABkAQMAAADOquA5AAAAA1BMVEWfoaLe8Y17AAAACXBIWXMAAABIAAAASABGyWs+AAAAD0lEQVQoz2NgGAWjgPoAAAJYAAF1NoZ3AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA4LTEyVDA1OjU4OjM0LTA3OjAwYZ6YmwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wOC0xMlQwNTo1ODozNC0wNzowMBDDICcAAAAASUVORK5CYII=) 50% 50% repeat-x;font-weight:normal;color:#fff}.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited{color:#fff;text-decoration:none}.ui-widget-content .ui-state-active{border:1px solid #82857f;background:#82857f url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABkAQMAAADOquA5AAAAA1BMVEWChX/DhfKXAAAACXBIWXMAAABIAAAASABGyWs+AAAAD0lEQVQoz2NgGAWjgPoAAAJYAAF1NoZ3AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA4LTEyVDA2OjAwOjE4LTA3OjAwO1F16gAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wOC0xMlQwNjowMDoxOC0wNzowMEoMzVYAAAAASUVORK5CYII=) 50% 50% repeat-x;font-weight:normal;color:#fff}.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited{color:#fff;text-decoration:none}.no-border{border:0}.ui-corner-all,.ui-corner-top{border-top-left-radius:5px}.ui-corner-all,.ui-corner-top{border-top-right-radius:5px}.ui-corner-all,.ui-corner-bottom{border-bottom-left-radius:5px}.ui-corner-all,.ui-corner-bottom{border-bottom-right-radius:5px}.ui-tabs .ui-tabs-panel{border-color:#c0c0c0;border-width:1px}#details th{width:15%;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.humanized{padding-left:3px;color:#6f6f6f;font-size:11px;text-decoration:underline;text-decoration-style:dotted}#sumo-link a{margin-left:.5em}.bugreporter{background-color:#f2f6f9;margin-top:1em;padding:0 .4em;border:1px solid #d7d7db;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}#report-index{clear:right}#report-index h3{margin:10px 0}.record{line-height:1.5em}.record th{text-align:right}.record pre{white-space:pre-wrap}.sig-overview,.sig-search{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMS8xMy8wOFUO4iYAAAAYdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3Jrc0+zH04AAABZSURBVDiNY/z//z8DJYCJIt3UMIAFmZOeno5LHYo/Z86cyUiqCxhxSbCg8dFDlBGHOE4DsNn2H00OxTBCXkDXjGEBxWFAyABGBgLhMMgSEhSQlDkYh35mAgAlxxEj48icMgAAAABJRU5ErkJggg==) left top no-repeat;display:inline-block;margin-left:.5em;padding-left:17px;font-size:12px;font-weight:bold}.sig-overview:link,.sig-overview:visited,.sig-search:link,.sig-search:visited{color:#0f1126;text-decoration:none}</style>
+<link type=image/x-icon rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAD///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAA5MQAAoLUAADiP////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAAABwAAWeMAAP7/AAB14wAAABMAAAAV////Af///wH///8B////Af///wH///8B////AQAAABcAAABHAP//SQAxMV0AAFv7AADi/wAAuf8AAGv5BwZN/wYGLKf///8B////Af///wH///8BAAAAFwAAAKkAAAD9AAAA/wD///8Af3//AACX/wAAy/8AAOL/AABM/wIC4P8AAInZ////Af///wH///8BAAAAFQAAAN0AAAD/AAAA/wAAAP8A////AK2t/wABS/8AANX/AACc/wQEjP8AAHynAAATKf///wH///8B////AQAAAKUAAAD/AAAA/wAAAP8AAAD/AP///wD///8Aoqz/ABaF/wAfifMAADS3AAAAB////wH///8B////AQAAABMAAAD7AAAA/wAAAP8AAAD/AAAA/wD///8A////AP///wD///8A////AP//H////wH///8B////Af///wEAAABBAAAA/wAAAP8AAAD/AAAA/wAAAP8A////AP///wD///8A////AP///wD//1H///8B////Af///wH///8BAP//QQD///8A////AP///wD///8A////AAAA/wAAAP8AAAD/AAAA/wAAAP8AAABR////Af///wH///8B////AQD//xMA///7AP///wD///8A////AP///wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAH////wH///8B////Af///wH///8BAP//pQD///8A////AP///wD///8AAAD/AAAA/wAAAP8AAAD/AAAAtf///wH///8B////Af///wH///8B////AQD//xUA///dAP///wD///8A////AAAA/wAAAP8AAAD/AAAA5QAAAB3///8B////Af///wH///8B////Af///wH///8BAP//FwD//6kA///9AP///wAAAP8AAAD/AAAAsQAAAB3///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAP//FwD//0cAAABJAAAAG////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//w=="><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://crash-stats.mozilla.org/report/index/4f5052b1-676e-4561-9c8e-c56030200611></head>
+ <body>
+ <div class=page-header>
+ <a class=title href=https://crash-stats.mozilla.org/>
+ <span>Mozilla Crash Reports</span>
+</a>
+ <form id=simple_search action=/search/quick/ data-no-csrf>
+ <label for=q class=visually-hidden>Search</label>
+ <input type=text id=q name=query placeholder="Find Crash ID or Signature" value>
+ <input type=submit class="hidden sf-hidden" value>
+ </form>
+ <div class=user-info>
+ 
+ <a class=sign-in-link href="https://crash-stats.mozilla.org/oidc/authenticate/?next=%2Freport%2Findex%2F4f5052b1-676e-4561-9c8e-c56030200611">Sign in</a>
+ 
+ </div>
+ </div>
+ <h1 class=sf-hidden>Product Navigation</h1>
+ <div class=version-nav>
+ 
+ 
+ 
+ <span class=quick-nav-title>Quick Navigation</span>
+ <ul class=filter>
+ <li>
+ <label for=products_select class=visually-hidden>Select Product</label>
+ <select id=products_select>
+ 
+ <option value=Firefox selected>Firefox</option>
+ 
+ <option value=FennecAndroid>FennecAndroid</option>
+ 
+ <option value=Focus>Focus</option>
+ 
+ <option value=FirefoxReality>FirefoxReality</option>
+ 
+ <option value=Fenix>Fenix</option>
+ 
+ <option value=GeckoView>GeckoView</option>
+ 
+ <option value=ReferenceBrowser>ReferenceBrowser</option>
+ 
+ <option value=GeckoViewExample>GeckoViewExample</option>
+ 
+ <option value=Thunderbird>Thunderbird</option>
+ 
+ <option value=SeaMonkey>SeaMonkey</option>
+ 
+ <option value=Fennec>Fennec</option>
+ 
+ </select>
+ </li>
+ <li class=version_select>
+ <label for=product_version_select class=visually-hidden>Select Version:</label>
+ <select id=product_version_select>
+ <optgroup label=Featured>
+ <option value="Current Versions" selected>Current Versions</option>
+ 
+ 
+ 
+ <option value=79.0a1>79.0a1</option>
+ 
+ <option value=78.0b5>78.0b5</option>
+ 
+ <option value=77.0.1>77.0.1</option>
+ 
+ 
+ </optgroup>
+ 
+ 
+ <optgroup label="All versions">
+ 
+ <option value=78.0b>78.0b</option>
+ 
+ <option value=78.0b4>78.0b4</option>
+ 
+ <option value=78.0b3>78.0b3</option>
+ 
+ <option value=78.0b2>78.0b2</option>
+ 
+ <option value=78.0b1>78.0b1</option>
+ 
+ <option value=78.0b0>78.0b0</option>
+ 
+ <option value=78.0a1>78.0a1</option>
+ 
+ <option value=77.0.1esr>77.0.1esr</option>
+ 
+ <option value=77.0esr>77.0esr</option>
+ 
+ <option value=77.0>77.0</option>
+ 
+ <option value=77.0rc3>77.0rc3</option>
+ 
+ <option value=77.0rc2>77.0rc2</option>
+ 
+ <option value=77.0rc1>77.0rc1</option>
+ 
+ <option value=77.0b>77.0b</option>
+ 
+ <option value=77.0b9>77.0b9</option>
+ 
+ <option value=77.0b8>77.0b8</option>
+ 
+ <option value=77.0b7>77.0b7</option>
+ 
+ <option value=77.0b6>77.0b6</option>
+ 
+ <option value=77.0b5>77.0b5</option>
+ 
+ <option value=77.0b4>77.0b4</option>
+ 
+ <option value=77.0b3>77.0b3</option>
+ 
+ <option value=77.0b2>77.0b2</option>
+ 
+ <option value=77.0b1>77.0b1</option>
+ 
+ <option value=77.0b0>77.0b0</option>
+ 
+ <option value=77.0a1>77.0a1</option>
+ 
+ <option value=76.0.1esr>76.0.1esr</option>
+ 
+ <option value=76.0.1>76.0.1</option>
+ 
+ <option value=76.0.1rc1>76.0.1rc1</option>
+ 
+ <option value=76.0esr>76.0esr</option>
+ 
+ <option value=76.0>76.0</option>
+ 
+ <option value=76.0rc2>76.0rc2</option>
+ 
+ <option value=76.0rc1>76.0rc1</option>
+ 
+ <option value=76.0b>76.0b</option>
+ 
+ <option value=76.0b8>76.0b8</option>
+ 
+ <option value=76.0b7>76.0b7</option>
+ 
+ <option value=76.0b6>76.0b6</option>
+ 
+ <option value=76.0b5>76.0b5</option>
+ 
+ <option value=76.0b4>76.0b4</option>
+ 
+ <option value=76.0b3>76.0b3</option>
+ 
+ <option value=76.0b2>76.0b2</option>
+ 
+ <option value=76.0b1>76.0b1</option>
+ 
+ <option value=76.0b0>76.0b0</option>
+ 
+ <option value=76.0a1>76.0a1</option>
+ 
+ <option value=75.0esr>75.0esr</option>
+ 
+ <option value=75.0>75.0</option>
+ 
+ <option value=75.0rc3>75.0rc3</option>
+ 
+ <option value=75.0rc2>75.0rc2</option>
+ 
+ <option value=75.0rc1>75.0rc1</option>
+ 
+ <option value=75.0b>75.0b</option>
+ 
+ <option value=75.0b12>75.0b12</option>
+ 
+ <option value=75.0b11>75.0b11</option>
+ 
+ <option value=75.0b10>75.0b10</option>
+ 
+ <option value=75.0b9>75.0b9</option>
+ 
+ <option value=75.0b8>75.0b8</option>
+ 
+ <option value=75.0b7>75.0b7</option>
+ 
+ <option value=75.0b6>75.0b6</option>
+ 
+ <option value=75.0b5>75.0b5</option>
+ 
+ <option value=75.0b4>75.0b4</option>
+ 
+ <option value=75.0b3>75.0b3</option>
+ 
+ <option value=75.0b2>75.0b2</option>
+ 
+ <option value=75.0b1>75.0b1</option>
+ 
+ <option value=75.0b0>75.0b0</option>
+ 
+ <option value=75.0a1>75.0a1</option>
+ 
+ <option value=74.0.1esr>74.0.1esr</option>
+ 
+ <option value=74.0.1>74.0.1</option>
+ 
+ <option value=74.0esr>74.0esr</option>
+ 
+ <option value=74.0>74.0</option>
+ 
+ <option value=74.0rc3>74.0rc3</option>
+ 
+ <option value=74.0rc2>74.0rc2</option>
+ 
+ <option value=74.0rc1>74.0rc1</option>
+ 
+ <option value=74.0b>74.0b</option>
+ 
+ <option value=74.0b9>74.0b9</option>
+ 
+ <option value=74.0b8>74.0b8</option>
+ 
+ <option value=74.0b7>74.0b7</option>
+ 
+ <option value=74.0b6>74.0b6</option>
+ 
+ <option value=74.0b5>74.0b5</option>
+ 
+ <option value=74.0b4>74.0b4</option>
+ 
+ <option value=74.0b3>74.0b3</option>
+ 
+ <option value=74.0b2>74.0b2</option>
+ 
+ <option value=74.0b1>74.0b1</option>
+ 
+ <option value=74.0a1>74.0a1</option>
+ 
+ <option value=73.0.1esr>73.0.1esr</option>
+ 
+ <option value=73.0.1>73.0.1</option>
+ 
+ <option value=73.0esr>73.0esr</option>
+ 
+ <option value=73.0>73.0</option>
+ 
+ <option value=73.0rc3>73.0rc3</option>
+ 
+ <option value=73.0rc2>73.0rc2</option>
+ 
+ <option value=73.0rc1>73.0rc1</option>
+ 
+ <option value=73.0b>73.0b</option>
+ 
+ <option value=73.0b12>73.0b12</option>
+ 
+ <option value=73.0b11>73.0b11</option>
+ 
+ <option value=73.0b10>73.0b10</option>
+ 
+ <option value=73.0b9>73.0b9</option>
+ 
+ <option value=73.0b8>73.0b8</option>
+ 
+ <option value=73.0b7>73.0b7</option>
+ 
+ <option value=73.0b6>73.0b6</option>
+ 
+ <option value=73.0b5>73.0b5</option>
+ 
+ <option value=73.0b4>73.0b4</option>
+ 
+ <option value=73.0b3>73.0b3</option>
+ 
+ <option value=73.0b2>73.0b2</option>
+ 
+ <option value=73.0b1>73.0b1</option>
+ 
+ <option value=73.0b0>73.0b0</option>
+ 
+ <option value=73.0a1>73.0a1</option>
+ 
+ <option value=72.0.2esr>72.0.2esr</option>
+ 
+ <option value=72.0.2>72.0.2</option>
+ 
+ <option value=72.0.2rc1>72.0.2rc1</option>
+ 
+ <option value=72.0.1esr>72.0.1esr</option>
+ 
+ <option value=72.0.1>72.0.1</option>
+ 
+ <option value=72.0>72.0</option>
+ 
+ <option value=72.0rc4>72.0rc4</option>
+ 
+ <option value=72.0rc3>72.0rc3</option>
+ 
+ <option value=72.0rc2>72.0rc2</option>
+ 
+ <option value=72.0b>72.0b</option>
+ 
+ <option value=72.0b11>72.0b11</option>
+ 
+ <option value=72.0b10>72.0b10</option>
+ 
+ <option value=72.0b9>72.0b9</option>
+ 
+ <option value=72.0b8>72.0b8</option>
+ 
+ <option value=72.0b7>72.0b7</option>
+ 
+ <option value=72.0b6>72.0b6</option>
+ 
+ <option value=72.0b5>72.0b5</option>
+ 
+ <option value=72.0b4>72.0b4</option>
+ 
+ <option value=72.0b3>72.0b3</option>
+ 
+ <option value=72.0b2>72.0b2</option>
+ 
+ <option value=72.0a1>72.0a1</option>
+ 
+ <option value=71.0esr>71.0esr</option>
+ 
+ <option value=71.0>71.0</option>
+ 
+ <option value=71.0rc5>71.0rc5</option>
+ 
+ <option value=71.0rc4>71.0rc4</option>
+ 
+ <option value=71.0rc2>71.0rc2</option>
+ 
+ <option value=71.0b>71.0b</option>
+ 
+ <option value=71.0b12>71.0b12</option>
+ 
+ <option value=71.0b11>71.0b11</option>
+ 
+ <option value=71.0b10>71.0b10</option>
+ 
+ <option value=71.0b9>71.0b9</option>
+ 
+ <option value=71.0b8>71.0b8</option>
+ 
+ <option value=71.0b7>71.0b7</option>
+ 
+ <option value=71.0b6>71.0b6</option>
+ 
+ <option value=71.0b5>71.0b5</option>
+ 
+ <option value=71.0b4>71.0b4</option>
+ 
+ <option value=71.0b3>71.0b3</option>
+ 
+ <option value=71.0a1>71.0a1</option>
+ 
+ <option value=70.0.1>70.0.1</option>
+ 
+ <option value=70.0esr>70.0esr</option>
+ 
+ <option value=70.0>70.0</option>
+ 
+ <option value=70.0rc2>70.0rc2</option>
+ 
+ <option value=70.0rc1>70.0rc1</option>
+ 
+ <option value=70.0b>70.0b</option>
+ 
+ <option value=70.0b14>70.0b14</option>
+ 
+ <option value=70.0b13>70.0b13</option>
+ 
+ <option value=70.0b12>70.0b12</option>
+ 
+ <option value=70.0b11>70.0b11</option>
+ 
+ <option value=70.0b10>70.0b10</option>
+ 
+ <option value=70.0b9>70.0b9</option>
+ 
+ <option value=70.0b8>70.0b8</option>
+ 
+ <option value=70.0b7>70.0b7</option>
+ 
+ <option value=70.0b6>70.0b6</option>
+ 
+ <option value=70.0b5>70.0b5</option>
+ 
+ <option value=70.0b4>70.0b4</option>
+ 
+ <option value=70.0b3>70.0b3</option>
+ 
+ <option value=70.0a1>70.0a1</option>
+ 
+ <option value=69.0.3>69.0.3</option>
+ 
+ <option value=69.0.2>69.0.2</option>
+ 
+ <option value=69.0.1>69.0.1</option>
+ 
+ <option value=69.0>69.0</option>
+ 
+ <option value=69.0rc2>69.0rc2</option>
+ 
+ <option value=69.0b>69.0b</option>
+ 
+ <option value=69.0b16>69.0b16</option>
+ 
+ <option value=69.0b15>69.0b15</option>
+ 
+ <option value=69.0b14>69.0b14</option>
+ 
+ <option value=69.0b13>69.0b13</option>
+ 
+ <option value=69.0b12>69.0b12</option>
+ 
+ <option value=69.0b11>69.0b11</option>
+ 
+ <option value=69.0b10>69.0b10</option>
+ 
+ <option value=69.0b9>69.0b9</option>
+ 
+ <option value=69.0b8>69.0b8</option>
+ 
+ <option value=69.0b7>69.0b7</option>
+ 
+ <option value=69.0b6>69.0b6</option>
+ 
+ <option value=69.0b5>69.0b5</option>
+ 
+ <option value=69.0b4>69.0b4</option>
+ 
+ <option value=69.0b3>69.0b3</option>
+ 
+ <option value=69.0a1>69.0a1</option>
+ 
+ <option value=68.9.0esr>68.9.0esr</option>
+ 
+ <option value=68.9.0>68.9.0</option>
+ 
+ <option value=68.8.0esr>68.8.0esr</option>
+ 
+ <option value=68.8.0>68.8.0</option>
+ 
+ <option value=68.7.0esr>68.7.0esr</option>
+ 
+ <option value=68.7.0>68.7.0</option>
+ 
+ <option value=68.6.1esr>68.6.1esr</option>
+ 
+ <option value=68.6.1>68.6.1</option>
+ 
+ <option value=68.6.0esr>68.6.0esr</option>
+ 
+ <option value=68.6.0>68.6.0</option>
+ 
+ <option value=68.5.0esr>68.5.0esr</option>
+ 
+ <option value=68.5.0>68.5.0</option>
+ 
+ <option value=68.4.2esr>68.4.2esr</option>
+ 
+ <option value=68.4.2>68.4.2</option>
+ 
+ <option value=68.4.1esr>68.4.1esr</option>
+ 
+ <option value=68.4.1>68.4.1</option>
+ 
+ <option value=68.4.0esr>68.4.0esr</option>
+ 
+ <option value=68.4.0>68.4.0</option>
+ 
+ <option value=68.3.0esr>68.3.0esr</option>
+ 
+ <option value=68.3.0>68.3.0</option>
+ 
+ <option value=68.2.0esr>68.2.0esr</option>
+ 
+ <option value=68.2.0>68.2.0</option>
+ 
+ <option value=68.1.0esr>68.1.0esr</option>
+ 
+ <option value=68.1.0>68.1.0</option>
+ 
+ <option value=68.0.2esr>68.0.2esr</option>
+ 
+ <option value=68.0.2>68.0.2</option>
+ 
+ <option value=68.0.1esr>68.0.1esr</option>
+ 
+ <option value=68.0.1>68.0.1</option>
+ 
+ <option value=68.0esr>68.0esr</option>
+ 
+ <option value=68.0>68.0</option>
+ 
+ <option value=68.0rc3>68.0rc3</option>
+ 
+ <option value=68.0rc2>68.0rc2</option>
+ 
+ <option value=68.0rc1>68.0rc1</option>
+ 
+ <option value=68.0b>68.0b</option>
+ 
+ <option value=68.0b14>68.0b14</option>
+ 
+ <option value=68.0b13>68.0b13</option>
+ 
+ <option value=68.0b12>68.0b12</option>
+ 
+ <option value=68.0b10>68.0b10</option>
+ 
+ <option value=68.0b9>68.0b9</option>
+ 
+ <option value=68.0b8>68.0b8</option>
+ 
+ <option value=68.0b6>68.0b6</option>
+ 
+ <option value=68.0b5>68.0b5</option>
+ 
+ <option value=68.0b4>68.0b4</option>
+ 
+ <option value=68.0b3>68.0b3</option>
+ 
+ <option value=68.0a1>68.0a1</option>
+ 
+ <option value=67.0.4>67.0.4</option>
+ 
+ <option value=67.0.3>67.0.3</option>
+ 
+ <option value=67.0.2>67.0.2</option>
+ 
+ <option value=67.0.1>67.0.1</option>
+ 
+ <option value=67.0esr>67.0esr</option>
+ 
+ <option value=67.0>67.0</option>
+ 
+ <option value=67.0rc2>67.0rc2</option>
+ 
+ <option value=67.0b>67.0b</option>
+ 
+ <option value=67.0b19>67.0b19</option>
+ 
+ <option value=67.0b18>67.0b18</option>
+ 
+ <option value=67.0b16>67.0b16</option>
+ 
+ <option value=67.0b15>67.0b15</option>
+ 
+ <option value=67.0b14>67.0b14</option>
+ 
+ <option value=67.0b13>67.0b13</option>
+ 
+ <option value=67.0b11>67.0b11</option>
+ 
+ <option value=67.0b10>67.0b10</option>
+ 
+ <option value=67.0b9>67.0b9</option>
+ 
+ <option value=67.0b8>67.0b8</option>
+ 
+ <option value=67.0b7>67.0b7</option>
+ 
+ <option value=67.0b6>67.0b6</option>
+ 
+ <option value=67.0b5>67.0b5</option>
+ 
+ <option value=67.0b4>67.0b4</option>
+ 
+ <option value=67.0b3>67.0b3</option>
+ 
+ <option value=67.0a1>67.0a1</option>
+ 
+ <option value=66.0.5>66.0.5</option>
+ 
+ <option value=66.0.4>66.0.4</option>
+ 
+ <option value=66.0.3>66.0.3</option>
+ 
+ <option value=66.0.2>66.0.2</option>
+ 
+ <option value=66.0.1>66.0.1</option>
+ 
+ <option value=66.0>66.0</option>
+ 
+ <option value=66.0rc3>66.0rc3</option>
+ 
+ <option value=66.0rc2>66.0rc2</option>
+ 
+ <option value=66.0rc1>66.0rc1</option>
+ 
+ <option value=66.0b>66.0b</option>
+ 
+ <option value=66.0b14>66.0b14</option>
+ 
+ <option value=66.0b13>66.0b13</option>
+ 
+ <option value=66.0b12>66.0b12</option>
+ 
+ <option value=66.0b11>66.0b11</option>
+ 
+ <option value=66.0b10>66.0b10</option>
+ 
+ <option value=66.0b9>66.0b9</option>
+ 
+ <option value=66.0b8>66.0b8</option>
+ 
+ <option value=66.0b7>66.0b7</option>
+ 
+ <option value=66.0b6>66.0b6</option>
+ 
+ <option value=66.0b5>66.0b5</option>
+ 
+ <option value=66.0b4>66.0b4</option>
+ 
+ <option value=66.0b3>66.0b3</option>
+ 
+ <option value=66.0b2>66.0b2</option>
+ 
+ <option value=66.0a1>66.0a1</option>
+ 
+ <option value=65.0.2>65.0.2</option>
+ 
+ <option value=65.0.1>65.0.1</option>
+ 
+ <option value=65.0>65.0</option>
+ 
+ <option value=65.0b>65.0b</option>
+ 
+ <option value=65.0b12>65.0b12</option>
+ 
+ <option value=65.0b11>65.0b11</option>
+ 
+ <option value=65.0b10>65.0b10</option>
+ 
+ <option value=65.0b9>65.0b9</option>
+ 
+ <option value=65.0b8>65.0b8</option>
+ 
+ <option value=65.0b7>65.0b7</option>
+ 
+ <option value=65.0b6>65.0b6</option>
+ 
+ <option value=65.0b5>65.0b5</option>
+ 
+ <option value=65.0b4>65.0b4</option>
+ 
+ <option value=65.0b3>65.0b3</option>
+ 
+ <option value=64.0.2>64.0.2</option>
+ 
+ <option value=64.0>64.0</option>
+ 
+ <option value=64.0b>64.0b</option>
+ 
+ <option value=64.0b14>64.0b14</option>
+ 
+ <option value=64.0b13>64.0b13</option>
+ 
+ <option value=64.0b12>64.0b12</option>
+ 
+ <option value=64.0b11>64.0b11</option>
+ 
+ <option value=64.0b10>64.0b10</option>
+ 
+ <option value=64.0b9>64.0b9</option>
+ 
+ <option value=64.0b8>64.0b8</option>
+ 
+ <option value=64.0b7>64.0b7</option>
+ 
+ <option value=64.0b6>64.0b6</option>
+ 
+ <option value=64.0b5>64.0b5</option>
+ 
+ <option value=64.0b4>64.0b4</option>
+ 
+ <option value=64.0b3>64.0b3</option>
+ 
+ <option value=64.0a1>64.0a1</option>
+ 
+ <option value=63.0.3>63.0.3</option>
+ 
+ <option value=63.0.1>63.0.1</option>
+ 
+ <option value=63.0>63.0</option>
+ 
+ <option value=63.0b>63.0b</option>
+ 
+ <option value=63.0b14>63.0b14</option>
+ 
+ <option value=63.0b13>63.0b13</option>
+ 
+ <option value=63.0b12>63.0b12</option>
+ 
+ <option value=63.0b9>63.0b9</option>
+ 
+ <option value=63.0b7>63.0b7</option>
+ 
+ <option value=63.0b6>63.0b6</option>
+ 
+ <option value=63.0b5>63.0b5</option>
+ 
+ <option value=63.0b4>63.0b4</option>
+ 
+ <option value=63.0b3>63.0b3</option>
+ 
+ <option value=63.0b2>63.0b2</option>
+ 
+ <option value=63.0a1>63.0a1</option>
+ 
+ <option value=62.0.3>62.0.3</option>
+ 
+ <option value=62.0.2>62.0.2</option>
+ 
+ <option value=62.0>62.0</option>
+ 
+ <option value=62.0rc2>62.0rc2</option>
+ 
+ <option value=62.0rc1>62.0rc1</option>
+ 
+ <option value=62.0b>62.0b</option>
+ 
+ <option value=62.0b20>62.0b20</option>
+ 
+ <option value=62.0b19>62.0b19</option>
+ 
+ <option value=62.0b18>62.0b18</option>
+ 
+ <option value=62.0b17>62.0b17</option>
+ 
+ <option value=62.0b16>62.0b16</option>
+ 
+ <option value=62.0b15>62.0b15</option>
+ 
+ <option value=62.0b14>62.0b14</option>
+ 
+ <option value=62.0b13>62.0b13</option>
+ 
+ <option value=62.0b12>62.0b12</option>
+ 
+ <option value=62.0b11>62.0b11</option>
+ 
+ <option value=62.0b10>62.0b10</option>
+ 
+ <option value=62.0b9>62.0b9</option>
+ 
+ <option value=62.0b8>62.0b8</option>
+ 
+ <option value=62.0b7>62.0b7</option>
+ 
+ <option value=62.0b6>62.0b6</option>
+ 
+ <option value=62.0b5>62.0b5</option>
+ 
+ <option value=62.0b4>62.0b4</option>
+ 
+ <option value=62.0b3>62.0b3</option>
+ 
+ <option value=62.0b1>62.0b1</option>
+ 
+ <option value=62.0a1>62.0a1</option>
+ 
+ <option value=61.0.2>61.0.2</option>
+ 
+ <option value=61.0.1>61.0.1</option>
+ 
+ <option value=61.0>61.0</option>
+ 
+ <option value=61.0rc3>61.0rc3</option>
+ 
+ <option value=61.0rc1>61.0rc1</option>
+ 
+ <option value=61.0b>61.0b</option>
+ 
+ <option value=61.0b14>61.0b14</option>
+ 
+ <option value=61.0b13>61.0b13</option>
+ 
+ <option value=61.0b12>61.0b12</option>
+ 
+ <option value=61.0b11>61.0b11</option>
+ 
+ <option value=61.0b10>61.0b10</option>
+ 
+ <option value=61.0b9>61.0b9</option>
+ 
+ <option value=61.0b8>61.0b8</option>
+ 
+ <option value=61.0b7>61.0b7</option>
+ 
+ <option value=61.0b6>61.0b6</option>
+ 
+ <option value=61.0b5>61.0b5</option>
+ 
+ <option value=61.0b4>61.0b4</option>
+ 
+ <option value=61.0b3>61.0b3</option>
+ 
+ <option value=61.0a1>61.0a1</option>
+ 
+ <option value=60.9.0esr>60.9.0esr</option>
+ 
+ <option value=60.9.0>60.9.0</option>
+ 
+ <option value=60.8.0esr>60.8.0esr</option>
+ 
+ <option value=60.8.0>60.8.0</option>
+ 
+ <option value=60.7.2esr>60.7.2esr</option>
+ 
+ <option value=60.7.2>60.7.2</option>
+ 
+ <option value=60.7.1esr>60.7.1esr</option>
+ 
+ <option value=60.7.0esr>60.7.0esr</option>
+ 
+ <option value=60.7.0>60.7.0</option>
+ 
+ <option value=60.6.3esr>60.6.3esr</option>
+ 
+ <option value=60.6.3>60.6.3</option>
+ 
+ <option value=60.6.2esr>60.6.2esr</option>
+ 
+ <option value=60.6.1esr>60.6.1esr</option>
+ 
+ <option value=60.6.0esr>60.6.0esr</option>
+ 
+ <option value=60.5.2esr>60.5.2esr</option>
+ 
+ <option value=60.5.1esr>60.5.1esr</option>
+ 
+ <option value=60.5.0esr>60.5.0esr</option>
+ 
+ <option value=60.5.0>60.5.0</option>
+ 
+ <option value=60.4.0esr>60.4.0esr</option>
+ 
+ <option value=60.4.0>60.4.0</option>
+ 
+ <option value=60.3.0esr>60.3.0esr</option>
+ 
+ <option value=60.3.0>60.3.0</option>
+ 
+ <option value=60.2.2esr>60.2.2esr</option>
+ 
+ <option value=60.2.2>60.2.2</option>
+ 
+ <option value=60.2.1esr>60.2.1esr</option>
+ 
+ <option value=60.2.1>60.2.1</option>
+ 
+ <option value=60.2.0esr>60.2.0esr</option>
+ 
+ <option value=60.2.0>60.2.0</option>
+ 
+ <option value=60.1.0esr>60.1.0esr</option>
+ 
+ <option value=60.1.0>60.1.0</option>
+ 
+ <option value=60.0.2esr>60.0.2esr</option>
+ 
+ <option value=60.0.2>60.0.2</option>
+ 
+ <option value=60.0.1esr>60.0.1esr</option>
+ 
+ <option value=60.0.1>60.0.1</option>
+ 
+ <option value=60.0esr>60.0esr</option>
+ 
+ <option value=60.0>60.0</option>
+ 
+ <option value=60.0b>60.0b</option>
+ 
+ <option value=60.0b16>60.0b16</option>
+ 
+ <option value=60.0b14>60.0b14</option>
+ 
+ <option value=60.0b13>60.0b13</option>
+ 
+ <option value=60.0b12>60.0b12</option>
+ 
+ <option value=60.0b10>60.0b10</option>
+ 
+ <option value=60.0b9>60.0b9</option>
+ 
+ <option value=60.0b8>60.0b8</option>
+ 
+ <option value=60.0b7>60.0b7</option>
+ 
+ <option value=60.0b5>60.0b5</option>
+ 
+ <option value=60.0b4>60.0b4</option>
+ 
+ <option value=60.0b3>60.0b3</option>
+ 
+ <option value=60.0b0>60.0b0</option>
+ 
+ <option value=60.0a1>60.0a1</option>
+ 
+ <option value=59.0.3>59.0.3</option>
+ 
+ <option value=59.0.2>59.0.2</option>
+ 
+ <option value=59.0.1>59.0.1</option>
+ 
+ <option value=59.0>59.0</option>
+ 
+ <option value=59.0b>59.0b</option>
+ 
+ <option value=59.0b14>59.0b14</option>
+ 
+ <option value=59.0b13>59.0b13</option>
+ 
+ <option value=59.0b11>59.0b11</option>
+ 
+ <option value=59.0b10>59.0b10</option>
+ 
+ <option value=59.0b9>59.0b9</option>
+ 
+ <option value=59.0b8>59.0b8</option>
+ 
+ <option value=59.0b7>59.0b7</option>
+ 
+ <option value=59.0b6>59.0b6</option>
+ 
+ <option value=59.0b5>59.0b5</option>
+ 
+ <option value=59.0b4>59.0b4</option>
+ 
+ <option value=59.0b3>59.0b3</option>
+ 
+ <option value=59.0a1>59.0a1</option>
+ 
+ <option value=58.0.2>58.0.2</option>
+ 
+ <option value=58.0.1>58.0.1</option>
+ 
+ <option value=58.0>58.0</option>
+ 
+ <option value=58.0rc1>58.0rc1</option>
+ 
+ <option value=58.0b>58.0b</option>
+ 
+ <option value=58.0b16>58.0b16</option>
+ 
+ <option value=58.0b15>58.0b15</option>
+ 
+ <option value=58.0b13>58.0b13</option>
+ 
+ <option value=58.0b12>58.0b12</option>
+ 
+ <option value=58.0b11>58.0b11</option>
+ 
+ <option value=58.0b10>58.0b10</option>
+ 
+ <option value=58.0b9>58.0b9</option>
+ 
+ <option value=58.0b8>58.0b8</option>
+ 
+ <option value=58.0b7>58.0b7</option>
+ 
+ <option value=58.0b6>58.0b6</option>
+ 
+ <option value=58.0b5>58.0b5</option>
+ 
+ <option value=58.0b4>58.0b4</option>
+ 
+ <option value=58.0b3>58.0b3</option>
+ 
+ <option value=58.0a1>58.0a1</option>
+ 
+ <option value=57.0.4>57.0.4</option>
+ 
+ <option value=57.0.3>57.0.3</option>
+ 
+ <option value=57.0.2>57.0.2</option>
+ 
+ <option value=57.0.1>57.0.1</option>
+ 
+ <option value=57.0>57.0</option>
+ 
+ <option value=57.0b>57.0b</option>
+ 
+ <option value=57.0b14>57.0b14</option>
+ 
+ <option value=57.0b13>57.0b13</option>
+ 
+ <option value=57.0b12>57.0b12</option>
+ 
+ <option value=57.0b11>57.0b11</option>
+ 
+ <option value=57.0b10>57.0b10</option>
+ 
+ <option value=57.0b9>57.0b9</option>
+ 
+ <option value=57.0b8>57.0b8</option>
+ 
+ <option value=57.0b7>57.0b7</option>
+ 
+ <option value=57.0b5>57.0b5</option>
+ 
+ <option value=57.0b4>57.0b4</option>
+ 
+ <option value=57.0b3>57.0b3</option>
+ 
+ <option value=57.0a1>57.0a1</option>
+ 
+ <option value=56.0.2>56.0.2</option>
+ 
+ <option value=56.0.1>56.0.1</option>
+ 
+ <option value=56.0>56.0</option>
+ 
+ <option value=56.0rc6>56.0rc6</option>
+ 
+ <option value=56.0b>56.0b</option>
+ 
+ <option value=56.0b12>56.0b12</option>
+ 
+ <option value=56.0b11>56.0b11</option>
+ 
+ <option value=56.0b9>56.0b9</option>
+ 
+ <option value=56.0b8>56.0b8</option>
+ 
+ <option value=56.0b7>56.0b7</option>
+ 
+ <option value=56.0b5>56.0b5</option>
+ 
+ <option value=56.0b3>56.0b3</option>
+ 
+ <option value=56.0b2>56.0b2</option>
+ 
+ <option value=56.0b1>56.0b1</option>
+ 
+ <option value=56.0a1>56.0a1</option>
+ 
+ <option value=55.0.3>55.0.3</option>
+ 
+ <option value=55.0.2>55.0.2</option>
+ 
+ <option value=55.0.1>55.0.1</option>
+ 
+ <option value=55.0>55.0</option>
+ 
+ <option value=55.0rc3>55.0rc3</option>
+ 
+ <option value=55.0b>55.0b</option>
+ 
+ <option value=55.0b13>55.0b13</option>
+ 
+ <option value=55.0b11>55.0b11</option>
+ 
+ <option value=55.0b9>55.0b9</option>
+ 
+ <option value=55.0b8>55.0b8</option>
+ 
+ <option value=55.0b6>55.0b6</option>
+ 
+ <option value=55.0b2>55.0b2</option>
+ 
+ <option value=54.0.1>54.0.1</option>
+ 
+ <option value=54.0>54.0</option>
+ 
+ <option value=54.0b>54.0b</option>
+ 
+ <option value=54.0b13>54.0b13</option>
+ 
+ <option value=54.0b9>54.0b9</option>
+ 
+ <option value=54.0b8>54.0b8</option>
+ 
+ <option value=54.0b7>54.0b7</option>
+ 
+ <option value=54.0b6>54.0b6</option>
+ 
+ <option value=54.0b4>54.0b4</option>
+ 
+ <option value=54.0b3>54.0b3</option>
+ 
+ <option value=54.0b1>54.0b1</option>
+ 
+ <option value=54.0a1>54.0a1</option>
+ 
+ <option value=53.0.3>53.0.3</option>
+ 
+ <option value=53.0.2>53.0.2</option>
+ 
+ <option value=53.0>53.0</option>
+ 
+ <option value=53.0b>53.0b</option>
+ 
+ <option value=53.0b10>53.0b10</option>
+ 
+ <option value=53.0b9>53.0b9</option>
+ 
+ <option value=53.0b5>53.0b5</option>
+ 
+ <option value=53.0b1>53.0b1</option>
+ 
+ <option value=53.0a1>53.0a1</option>
+ 
+ <option value=52.9.1esr>52.9.1esr</option>
+ 
+ <option value=52.9.0esr>52.9.0esr</option>
+ 
+ <option value=52.9.0>52.9.0</option>
+ 
+ <option value=52.8.1esr>52.8.1esr</option>
+ 
+ <option value=52.8.1>52.8.1</option>
+ 
+ <option value=52.8.0esr>52.8.0esr</option>
+ 
+ <option value=52.8.0>52.8.0</option>
+ 
+ <option value=52.7.4esr>52.7.4esr</option>
+ 
+ <option value=52.7.3esr>52.7.3esr</option>
+ 
+ <option value=52.7.3>52.7.3</option>
+ 
+ <option value=52.7.2esr>52.7.2esr</option>
+ 
+ <option value=52.7.1esr>52.7.1esr</option>
+ 
+ <option value=52.7.1>52.7.1</option>
+ 
+ <option value=52.7.0esr>52.7.0esr</option>
+ 
+ <option value=52.7.0>52.7.0</option>
+ 
+ <option value=52.6.0esr>52.6.0esr</option>
+ 
+ <option value=52.6.0>52.6.0</option>
+ 
+ <option value=52.5.3esr>52.5.3esr</option>
+ 
+ <option value=52.5.3>52.5.3</option>
+ 
+ <option value=52.5.2esr>52.5.2esr</option>
+ 
+ <option value=52.5.2>52.5.2</option>
+ 
+ <option value=52.5.0esr>52.5.0esr</option>
+ 
+ <option value=52.5.0>52.5.0</option>
+ 
+ <option value=52.4.1esr>52.4.1esr</option>
+ 
+ <option value=52.4.1>52.4.1</option>
+ 
+ <option value=52.4.0esr>52.4.0esr</option>
+ 
+ <option value=52.4.0>52.4.0</option>
+ 
+ <option value=52.3.0esr>52.3.0esr</option>
+ 
+ <option value=52.3.0>52.3.0</option>
+ 
+ <option value=52.2.1esr>52.2.1esr</option>
+ 
+ <option value=52.2.1>52.2.1</option>
+ 
+ <option value=52.2.0esr>52.2.0esr</option>
+ 
+ <option value=52.2.0>52.2.0</option>
+ 
+ <option value=52.1.2esr>52.1.2esr</option>
+ 
+ <option value=52.1.2>52.1.2</option>
+ 
+ <option value=52.1.1esr>52.1.1esr</option>
+ 
+ <option value=52.1.1>52.1.1</option>
+ 
+ <option value=52.1.0esr>52.1.0esr</option>
+ 
+ <option value=52.1.0>52.1.0</option>
+ 
+ <option value=52.0.2esr>52.0.2esr</option>
+ 
+ <option value=52.0.2>52.0.2</option>
+ 
+ <option value=52.0.1esr>52.0.1esr</option>
+ 
+ <option value=52.0.1>52.0.1</option>
+ 
+ <option value=52.0esr>52.0esr</option>
+ 
+ <option value=52.0>52.0</option>
+ 
+ <option value=52.0b>52.0b</option>
+ 
+ <option value=52.0b9>52.0b9</option>
+ 
+ <option value=52.0b4>52.0b4</option>
+ 
+ <option value=52.0a2b0>52.0a2b0</option>
+ 
+ <option value=52.0a2b>52.0a2b</option>
+ 
+ <option value=51.0.1esr>51.0.1esr</option>
+ 
+ <option value=51.0.1>51.0.1</option>
+ 
+ <option value=51.0esr>51.0esr</option>
+ 
+ <option value=51.0>51.0</option>
+ 
+ <option value=51.0b>51.0b</option>
+ 
+ <option value=51.0b14>51.0b14</option>
+ 
+ <option value=51.0b12>51.0b12</option>
+ 
+ <option value=51.0b10>51.0b10</option>
+ 
+ <option value=51.0b9>51.0b9</option>
+ 
+ <option value=51.0b7>51.0b7</option>
+ 
+ <option value=51.0b6>51.0b6</option>
+ 
+ <option value=51.0b3>51.0b3</option>
+ 
+ <option value=51.0b2>51.0b2</option>
+ 
+ <option value=51.0b1>51.0b1</option>
+ 
+ <option value=51.0a2b0>51.0a2b0</option>
+ 
+ <option value=51.0a2b>51.0a2b</option>
+ 
+ <option value=51.0a1>51.0a1</option>
+ 
+ <option value=50.1.0esr>50.1.0esr</option>
+ 
+ <option value=50.1.0>50.1.0</option>
+ 
+ <option value=50.0.2esr>50.0.2esr</option>
+ 
+ <option value=50.0.2>50.0.2</option>
+ 
+ <option value=50.0.1>50.0.1</option>
+ 
+ <option value=50.0esr>50.0esr</option>
+ 
+ <option value=50.0>50.0</option>
+ 
+ <option value=50.0b>50.0b</option>
+ 
+ <option value=50.0b11>50.0b11</option>
+ 
+ <option value=50.0b9>50.0b9</option>
+ 
+ <option value=50.0b8>50.0b8</option>
+ 
+ <option value=50.0b7>50.0b7</option>
+ 
+ <option value=50.0b6>50.0b6</option>
+ 
+ <option value=50.0b5>50.0b5</option>
+ 
+ <option value=50.0b4>50.0b4</option>
+ 
+ <option value=50.0b3>50.0b3</option>
+ 
+ <option value=50.0b2>50.0b2</option>
+ 
+ <option value=50.0b1>50.0b1</option>
+ 
+ <option value=50.0a1>50.0a1</option>
+ 
+ <option value=49.0.2esr>49.0.2esr</option>
+ 
+ <option value=49.0.2>49.0.2</option>
+ 
+ <option value=49.0.1esr>49.0.1esr</option>
+ 
+ <option value=49.0.1>49.0.1</option>
+ 
+ <option value=49.0>49.0</option>
+ 
+ <option value=49.0b>49.0b</option>
+ 
+ <option value=49.0b10>49.0b10</option>
+ 
+ <option value=49.0b9>49.0b9</option>
+ 
+ <option value=49.0b8>49.0b8</option>
+ 
+ <option value=49.0b7>49.0b7</option>
+ 
+ <option value=49.0b6>49.0b6</option>
+ 
+ <option value=49.0b5>49.0b5</option>
+ 
+ <option value=49.0b4>49.0b4</option>
+ 
+ <option value=49.0b3>49.0b3</option>
+ 
+ <option value=49.0b2>49.0b2</option>
+ 
+ <option value=49.0b1>49.0b1</option>
+ 
+ <option value=49.0a2b>49.0a2b</option>
+ 
+ <option value=49.0a2b0>49.0a2b0</option>
+ 
+ <option value=48.0.2esr>48.0.2esr</option>
+ 
+ <option value=48.0.2>48.0.2</option>
+ 
+ <option value=48.0.1>48.0.1</option>
+ 
+ <option value=48.0esr>48.0esr</option>
+ 
+ <option value=48.0>48.0</option>
+ 
+ <option value=48.0rc2>48.0rc2</option>
+ 
+ <option value=48.0b>48.0b</option>
+ 
+ <option value=48.0b10>48.0b10</option>
+ 
+ <option value=48.0b9>48.0b9</option>
+ 
+ <option value=48.0b7>48.0b7</option>
+ 
+ <option value=48.0b6>48.0b6</option>
+ 
+ <option value=48.0b5>48.0b5</option>
+ 
+ <option value=48.0b4>48.0b4</option>
+ 
+ <option value=48.0b3>48.0b3</option>
+ 
+ <option value=48.0b2>48.0b2</option>
+ 
+ <option value=48.0b1>48.0b1</option>
+ 
+ <option value=48.0a2b>48.0a2b</option>
+ 
+ <option value=48.0a2b0>48.0a2b0</option>
+ 
+ <option value=47.0.2esr>47.0.2esr</option>
+ 
+ <option value=47.0.2>47.0.2</option>
+ 
+ <option value=47.0.2rc2>47.0.2rc2</option>
+ 
+ <option value=47.0.1>47.0.1</option>
+ 
+ <option value=47.0>47.0</option>
+ 
+ <option value=47.0b>47.0b</option>
+ 
+ <option value=47.0b9>47.0b9</option>
+ 
+ <option value=47.0b8>47.0b8</option>
+ 
+ <option value=47.0b7>47.0b7</option>
+ 
+ <option value=47.0b6>47.0b6</option>
+ 
+ <option value=47.0b4>47.0b4</option>
+ 
+ <option value=47.0b2>47.0b2</option>
+ 
+ <option value=47.0b1>47.0b1</option>
+ 
+ <option value=47.0a2b0>47.0a2b0</option>
+ 
+ <option value=47.0a2b>47.0a2b</option>
+ 
+ <option value=46.0.1>46.0.1</option>
+ 
+ <option value=46.0>46.0</option>
+ 
+ <option value=46.0b>46.0b</option>
+ 
+ <option value=46.0b11>46.0b11</option>
+ 
+ <option value=46.0b10>46.0b10</option>
+ 
+ <option value=46.0b9>46.0b9</option>
+ 
+ <option value=46.0b8>46.0b8</option>
+ 
+ <option value=46.0b7>46.0b7</option>
+ 
+ <option value=46.0b6>46.0b6</option>
+ 
+ <option value=46.0b5>46.0b5</option>
+ 
+ <option value=46.0b2>46.0b2</option>
+ 
+ <option value=46.0b1>46.0b1</option>
+ 
+ <option value=46.0b0>46.0b0</option>
+ 
+ <option value=45.9.0esr>45.9.0esr</option>
+ 
+ <option value=45.9.0>45.9.0</option>
+ 
+ <option value=45.8.0esr>45.8.0esr</option>
+ 
+ <option value=45.8.0>45.8.0</option>
+ 
+ <option value=45.7.0esr>45.7.0esr</option>
+ 
+ <option value=45.7.0>45.7.0</option>
+ 
+ <option value=45.6.0esr>45.6.0esr</option>
+ 
+ <option value=45.6.0>45.6.0</option>
+ 
+ <option value=45.5.1esr>45.5.1esr</option>
+ 
+ <option value=45.5.0esr>45.5.0esr</option>
+ 
+ <option value=45.4.0esr>45.4.0esr</option>
+ 
+ <option value=45.3.0esr>45.3.0esr</option>
+ 
+ <option value=45.3.0>45.3.0</option>
+ 
+ <option value=45.2.0esr>45.2.0esr</option>
+ 
+ <option value=45.1.2>45.1.2</option>
+ 
+ <option value=45.1.1esr>45.1.1esr</option>
+ 
+ <option value=45.1.0esr>45.1.0esr</option>
+ 
+ <option value=45.0.2esr>45.0.2esr</option>
+ 
+ <option value=45.0.2>45.0.2</option>
+ 
+ <option value=45.0.1esr>45.0.1esr</option>
+ 
+ <option value=45.0.1>45.0.1</option>
+ 
+ <option value=45.0esr>45.0esr</option>
+ 
+ <option value=45.0>45.0</option>
+ 
+ <option value=45.0b>45.0b</option>
+ 
+ <option value=45.0b10>45.0b10</option>
+ 
+ <option value=45.0b9>45.0b9</option>
+ 
+ <option value=45.0b6>45.0b6</option>
+ 
+ <option value=45.0b3>45.0b3</option>
+ 
+ <option value=45.0b2>45.0b2</option>
+ 
+ <option value=45.0b1>45.0b1</option>
+ 
+ <option value=45.0a1>45.0a1</option>
+ 
+ <option value=45.0a2b>45.0a2b</option>
+ 
+ <option value=45.0a2b0>45.0a2b0</option>
+ 
+ <option value=44.0.2>44.0.2</option>
+ 
+ <option value=44.0.1>44.0.1</option>
+ 
+ <option value=44.0>44.0</option>
+ 
+ <option value=44.0rc3>44.0rc3</option>
+ 
+ <option value=44.0b>44.0b</option>
+ 
+ <option value=44.0b9>44.0b9</option>
+ 
+ <option value=44.0b8>44.0b8</option>
+ 
+ <option value=44.0b7>44.0b7</option>
+ 
+ <option value=44.0b4>44.0b4</option>
+ 
+ <option value=44.0b1>44.0b1</option>
+ 
+ <option value=43.0.4>43.0.4</option>
+ 
+ <option value=43.0.3>43.0.3</option>
+ 
+ <option value=43.0.2>43.0.2</option>
+ 
+ <option value=43.0.1>43.0.1</option>
+ 
+ <option value=43.0.1b>43.0.1b</option>
+ 
+ <option value=43.0.1b0>43.0.1b0</option>
+ 
+ <option value=43.0>43.0</option>
+ 
+ <option value=43.0b>43.0b</option>
+ 
+ <option value=43.0b9>43.0b9</option>
+ 
+ <option value=43.0b7>43.0b7</option>
+ 
+ <option value=43.0b6>43.0b6</option>
+ 
+ <option value=43.0b5>43.0b5</option>
+ 
+ <option value=43.0b4>43.0b4</option>
+ 
+ <option value=43.0b3>43.0b3</option>
+ 
+ <option value=43.0b2>43.0b2</option>
+ 
+ <option value=43.0b1>43.0b1</option>
+ 
+ <option value=42.0>42.0</option>
+ 
+ <option value=42.0b>42.0b</option>
+ 
+ <option value=42.0b9>42.0b9</option>
+ 
+ <option value=42.0b8>42.0b8</option>
+ 
+ <option value=42.0b7>42.0b7</option>
+ 
+ <option value=42.0b6>42.0b6</option>
+ 
+ <option value=42.0b5>42.0b5</option>
+ 
+ <option value=42.0b4>42.0b4</option>
+ 
+ <option value=42.0b3>42.0b3</option>
+ 
+ <option value=42.0b2>42.0b2</option>
+ 
+ <option value=42.0b1>42.0b1</option>
+ 
+ <option value=42.0a2b>42.0a2b</option>
+ 
+ <option value=42.0a2b0>42.0a2b0</option>
+ 
+ <option value=41.0.2>41.0.2</option>
+ 
+ <option value=41.0.1>41.0.1</option>
+ 
+ <option value=41.0>41.0</option>
+ 
+ <option value=41.0b>41.0b</option>
+ 
+ <option value=41.0b9>41.0b9</option>
+ 
+ <option value=41.0b8>41.0b8</option>
+ 
+ <option value=41.0b7>41.0b7</option>
+ 
+ <option value=41.0b6>41.0b6</option>
+ 
+ <option value=41.0b5>41.0b5</option>
+ 
+ <option value=41.0b4>41.0b4</option>
+ 
+ <option value=41.0b3>41.0b3</option>
+ 
+ <option value=41.0b2>41.0b2</option>
+ 
+ <option value=41.0b1>41.0b1</option>
+ 
+ <option value=40.0.3>40.0.3</option>
+ 
+ <option value=40.0.2>40.0.2</option>
+ 
+ <option value=40.0.1>40.0.1</option>
+ 
+ <option value=40.0>40.0</option>
+ 
+ <option value=40.0b>40.0b</option>
+ 
+ <option value=40.0b9>40.0b9</option>
+ 
+ <option value=40.0b8>40.0b8</option>
+ 
+ <option value=40.0b7>40.0b7</option>
+ 
+ <option value=40.0b6>40.0b6</option>
+ 
+ <option value=40.0b4>40.0b4</option>
+ 
+ <option value=40.0b3>40.0b3</option>
+ 
+ <option value=40.0b2>40.0b2</option>
+ 
+ <option value=40.0b1>40.0b1</option>
+ 
+ <option value=39.0.3>39.0.3</option>
+ 
+ <option value=39.0>39.0</option>
+ 
+ <option value=39.0b>39.0b</option>
+ 
+ <option value=39.0b0>39.0b0</option>
+ 
+ <option value=38.8.0esr>38.8.0esr</option>
+ 
+ <option value=38.7.1esr>38.7.1esr</option>
+ 
+ <option value=38.7.0esr>38.7.0esr</option>
+ 
+ <option value=38.6.1esr>38.6.1esr</option>
+ 
+ <option value=38.6.0esr>38.6.0esr</option>
+ 
+ <option value=38.5.2esr>38.5.2esr</option>
+ 
+ <option value=38.5.1esr>38.5.1esr</option>
+ 
+ <option value=38.5.0esr>38.5.0esr</option>
+ 
+ <option value=38.4.0esr>38.4.0esr</option>
+ 
+ <option value=38.4.0>38.4.0</option>
+ 
+ <option value=38.3.0esr>38.3.0esr</option>
+ 
+ <option value=38.2.1esr>38.2.1esr</option>
+ 
+ <option value=38.2.0esr>38.2.0esr</option>
+ 
+ <option value=38.1.1esr>38.1.1esr</option>
+ 
+ <option value=38.1.0esr>38.1.0esr</option>
+ 
+ <option value=38.0.6>38.0.6</option>
+ 
+ <option value=38.0.5>38.0.5</option>
+ 
+ <option value=38.0.5b>38.0.5b</option>
+ 
+ <option value=38.0.5b0>38.0.5b0</option>
+ 
+ <option value=38.0.1esr>38.0.1esr</option>
+ 
+ <option value=38.0.1>38.0.1</option>
+ 
+ <option value=38.0esr>38.0esr</option>
+ 
+ <option value=38.0>38.0</option>
+ 
+ <option value=38.0b>38.0b</option>
+ 
+ <option value=38.0b0>38.0b0</option>
+ 
+ <option value=37.0.2>37.0.2</option>
+ 
+ <option value=37.0.1>37.0.1</option>
+ 
+ <option value=37.0>37.0</option>
+ 
+ <option value=37.0b>37.0b</option>
+ 
+ <option value=37.0b0>37.0b0</option>
+ 
+ <option value=36.0.4>36.0.4</option>
+ 
+ <option value=36.0.1>36.0.1</option>
+ 
+ <option value=36.0>36.0</option>
+ 
+ <option value=36.0b>36.0b</option>
+ 
+ <option value=36.0b0>36.0b0</option>
+ 
+ <option value=35.0.1>35.0.1</option>
+ 
+ <option value=35.0>35.0</option>
+ 
+ <option value=35.0b>35.0b</option>
+ 
+ <option value=35.0b0>35.0b0</option>
+ 
+ <option value=34.0.5>34.0.5</option>
+ 
+ <option value=34.0>34.0</option>
+ 
+ <option value=34.0b>34.0b</option>
+ 
+ <option value=34.0b0>34.0b0</option>
+ 
+ <option value=33.1.1>33.1.1</option>
+ 
+ <option value=33.1>33.1</option>
+ 
+ <option value=33.0.3>33.0.3</option>
+ 
+ <option value=33.0.2>33.0.2</option>
+ 
+ <option value=33.0.1>33.0.1</option>
+ 
+ <option value=33.0>33.0</option>
+ 
+ <option value=33.0b>33.0b</option>
+ 
+ <option value=33.0b0>33.0b0</option>
+ 
+ <option value=32.0.3>32.0.3</option>
+ 
+ <option value=32.0.2>32.0.2</option>
+ 
+ <option value=32.0.1>32.0.1</option>
+ 
+ <option value=32.0>32.0</option>
+ 
+ <option value=32.0b>32.0b</option>
+ 
+ <option value=32.0b0>32.0b0</option>
+ 
+ <option value=31.8.0esr>31.8.0esr</option>
+ 
+ <option value=31.7.0esr>31.7.0esr</option>
+ 
+ <option value=31.6.0esr>31.6.0esr</option>
+ 
+ <option value=31.5.3esr>31.5.3esr</option>
+ 
+ <option value=31.5.0esr>31.5.0esr</option>
+ 
+ <option value=31.4.0esr>31.4.0esr</option>
+ 
+ <option value=31.3.0esr>31.3.0esr</option>
+ 
+ <option value=31.2.0esr>31.2.0esr</option>
+ 
+ <option value=31.1.1esr>31.1.1esr</option>
+ 
+ <option value=31.1.0esr>31.1.0esr</option>
+ 
+ <option value=31.0esr>31.0esr</option>
+ 
+ <option value=31.0>31.0</option>
+ 
+ <option value=31.0b>31.0b</option>
+ 
+ <option value=31.0b0>31.0b0</option>
+ 
+ <option value=30.0>30.0</option>
+ 
+ <option value=30.0b>30.0b</option>
+ 
+ <option value=30.0b0>30.0b0</option>
+ 
+ <option value=29.0.1>29.0.1</option>
+ 
+ <option value=29.0>29.0</option>
+ 
+ <option value=29.0b>29.0b</option>
+ 
+ <option value=29.0b0>29.0b0</option>
+ 
+ <option value=28.0>28.0</option>
+ 
+ <option value=28.0b>28.0b</option>
+ 
+ <option value=28.0b0>28.0b0</option>
+ 
+ <option value=27.0.1>27.0.1</option>
+ 
+ <option value=27.0>27.0</option>
+ 
+ <option value=27.0b>27.0b</option>
+ 
+ <option value=27.0b0>27.0b0</option>
+ 
+ <option value=26.0>26.0</option>
+ 
+ <option value=26.0b>26.0b</option>
+ 
+ <option value=26.0b0>26.0b0</option>
+ 
+ <option value=25.0.1>25.0.1</option>
+ 
+ <option value=25.0>25.0</option>
+ 
+ <option value=25.0b>25.0b</option>
+ 
+ <option value=25.0b0>25.0b0</option>
+ 
+ <option value=24.8.1esr>24.8.1esr</option>
+ 
+ <option value=24.4.0esr>24.4.0esr</option>
+ 
+ <option value=24.3.0esr>24.3.0esr</option>
+ 
+ <option value=24.0esr>24.0esr</option>
+ 
+ <option value=24.0>24.0</option>
+ 
+ <option value=24.0b>24.0b</option>
+ 
+ <option value=24.0b0>24.0b0</option>
+ 
+ <option value=23.0.1>23.0.1</option>
+ 
+ <option value=23.0>23.0</option>
+ 
+ <option value=23.0b>23.0b</option>
+ 
+ <option value=23.0b0>23.0b0</option>
+ 
+ <option value=22.0>22.0</option>
+ 
+ <option value=22.0b>22.0b</option>
+ 
+ <option value=22.0b0>22.0b0</option>
+ 
+ <option value=21.0>21.0</option>
+ 
+ <option value=21.0b>21.0b</option>
+ 
+ <option value=21.0b0>21.0b0</option>
+ 
+ <option value=20.0.1>20.0.1</option>
+ 
+ <option value=20.0>20.0</option>
+ 
+ <option value=20.0b>20.0b</option>
+ 
+ <option value=20.0b0>20.0b0</option>
+ 
+ <option value=19.0.2>19.0.2</option>
+ 
+ <option value=19.0>19.0</option>
+ 
+ <option value=19.0b>19.0b</option>
+ 
+ <option value=19.0b0>19.0b0</option>
+ 
+ <option value=18.0.2>18.0.2</option>
+ 
+ <option value=18.0.1>18.0.1</option>
+ 
+ <option value=18.0>18.0</option>
+ 
+ <option value=18.0b>18.0b</option>
+ 
+ <option value=18.0b0>18.0b0</option>
+ 
+ <option value=17.0.11esr>17.0.11esr</option>
+ 
+ <option value=17.0.8esr>17.0.8esr</option>
+ 
+ <option value=17.0.1>17.0.1</option>
+ 
+ <option value=17.0esr>17.0esr</option>
+ 
+ <option value=17.0>17.0</option>
+ 
+ <option value=17.0b>17.0b</option>
+ 
+ <option value=17.0b0>17.0b0</option>
+ 
+ <option value=16.0.2>16.0.2</option>
+ 
+ <option value=16.0.1>16.0.1</option>
+ 
+ <option value=16.0>16.0</option>
+ 
+ <option value=16.0b>16.0b</option>
+ 
+ <option value=16.0b0>16.0b0</option>
+ 
+ <option value=15.0.1>15.0.1</option>
+ 
+ <option value=15.0>15.0</option>
+ 
+ <option value=15.0b>15.0b</option>
+ 
+ <option value=15.0b0>15.0b0</option>
+ 
+ <option value=14.0.1>14.0.1</option>
+ 
+ <option value=14.0b>14.0b</option>
+ 
+ <option value=14.0b0>14.0b0</option>
+ 
+ <option value=13.0.1>13.0.1</option>
+ 
+ <option value=13.0>13.0</option>
+ 
+ <option value=13.0b>13.0b</option>
+ 
+ <option value=13.0b0>13.0b0</option>
+ 
+ <option value=12.0>12.0</option>
+ 
+ <option value=12.0b>12.0b</option>
+ 
+ <option value=12.0b0>12.0b0</option>
+ 
+ <option value=11.0>11.0</option>
+ 
+ <option value=11.0b>11.0b</option>
+ 
+ <option value=11.0b0>11.0b0</option>
+ 
+ <option value=10.0.12esr>10.0.12esr</option>
+ 
+ <option value=10.0.11esr>10.0.11esr</option>
+ 
+ <option value=10.0.2>10.0.2</option>
+ 
+ <option value=10.0>10.0</option>
+ 
+ <option value=10.0b>10.0b</option>
+ 
+ <option value=10.0b0>10.0b0</option>
+ 
+ <option value=9.0.1>9.0.1</option>
+ 
+ <option value=9.0b>9.0b</option>
+ 
+ <option value=9.0b0>9.0b0</option>
+ 
+ <option value=8.0.1>8.0.1</option>
+ 
+ <option value=8.0>8.0</option>
+ 
+ <option value=8.0b>8.0b</option>
+ 
+ <option value=8.0b0>8.0b0</option>
+ 
+ <option value=7.0.1>7.0.1</option>
+ 
+ <option value=7.0>7.0</option>
+ 
+ <option value=7.0b>7.0b</option>
+ 
+ <option value=7.0b0>7.0b0</option>
+ 
+ <option value=6.0.2>6.0.2</option>
+ 
+ <option value=6.0>6.0</option>
+ 
+ <option value=5.0.1>5.0.1</option>
+ 
+ <option value=5.0>5.0</option>
+ 
+ <option value=4.0.1>4.0.1</option>
+ 
+ <option value=4.0>4.0</option>
+ 
+ <option value=3.6.28>3.6.28</option>
+ 
+ <option value=3.6.26>3.6.26</option>
+ 
+ <option value=3.6.25>3.6.25</option>
+ 
+ <option value=3.6.23>3.6.23</option>
+ 
+ <option value=3.6.18>3.6.18</option>
+ 
+ <option value=3.6.17>3.6.17</option>
+ 
+ <option value=3.6.13>3.6.13</option>
+ 
+ <option value=3.6.12>3.6.12</option>
+ 
+ <option value=3.6.10>3.6.10</option>
+ 
+ <option value=3.6.8>3.6.8</option>
+ 
+ <option value=3.6.6>3.6.6</option>
+ 
+ <option value=3.6.3>3.6.3</option>
+ 
+ <option value=3.6>3.6</option>
+ 
+ <option value=3.5.16>3.5.16</option>
+ 
+ <option value=3.5.13>3.5.13</option>
+ 
+ <option value=3.5.7>3.5.7</option>
+ 
+ <option value=3.5.6>3.5.6</option>
+ 
+ <option value=3.5.5>3.5.5</option>
+ 
+ <option value=3.5.4>3.5.4</option>
+ 
+ <option value=3.5.3>3.5.3</option>
+ 
+ <option value=3.5.2>3.5.2</option>
+ 
+ <option value=3.5.1>3.5.1</option>
+ 
+ <option value=3.5>3.5</option>
+ 
+ <option value=3.0.19>3.0.19</option>
+ 
+ <option value=3.0.11>3.0.11</option>
+ 
+ <option value=3.0.10>3.0.10</option>
+ 
+ <option value=3.0.9>3.0.9</option>
+ 
+ <option value=3.0.8>3.0.8</option>
+ 
+ <option value=3.0.7>3.0.7</option>
+ 
+ <option value=3.0.6>3.0.6</option>
+ 
+ <option value=3.0.5>3.0.5</option>
+ 
+ <option value=3.0.3>3.0.3</option>
+ 
+ <option value=3.0.1>3.0.1</option>
+ 
+ <option value=3.0>3.0</option>
+ 
+ <option value=3.0b>3.0b</option>
+ 
+ <option value=3.0b3>3.0b3</option>
+ 
+ </optgroup>
+ 
+ </select>
+ </li>
+ <li>
+ <label for=report_select class=visually-hidden>Report:</label>
+ <select id=report_select>
+ <option value=products data-url-product=/home/product/__PRODUCT__ data-url-version="/home/product/__PRODUCT__?version=__VERSION__" selected>Overview</option>
+ <option value=topcrasher data-url-product="/topcrashers/?product=__PRODUCT__" data-url-version="/topcrashers/?product=__PRODUCT__&amp;version=__VERSION__">Top Crashers</option>
+ 
+ </select>
+ </li>
+ </ul>
+ 
+ <div class=nav-links>
+ <a href=https://crash-stats.mozilla.org/documentation/>Documentation</a>
+ |
+ <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Socorro">File a bug</a>
+ |
+ <a href="https://crash-stats.mozilla.org/search/?product=Firefox&amp;_dont_run=1">Super Search</a>
+ </div>
+ </div>
+ 
+ 
+ 
+ <div id=mainbody data-product=Fenix data-version=77.0.0-beta.2 data-platform=Unknown data-signature="java.lang.IllegalStateException: at mozilla.components.feature.qr.QrFragment.openCamera$feature_qr_release(QrFragment.kt:9)" data-channel=beta>
+ <div class=page-heading>
+ <h2>Fenix 77.0.0-beta.2 Crash Report [@ java.lang.IllegalStateException: at mozilla.components.feature.qr.QrFragment.openCamera$feature_qr_release(QrFragment.kt:9) ]</h2>
+ </div>
+ <div class=protected-info>
+ 
+ You are seeing public data only.
+ See <a href=https://crash-stats.mozilla.org/documentation/protected_data_access/>protected data access documentation</a> for more
+ information.
+ 
+ </div>
+ <div class=panel>
+ <div class=body>
+ 
+ <div id=sumo-link>
+ <a href="https://support.mozilla.org/search?q=java.lang.IllegalStateException%3A%20at%20mozilla.components.feature.qr.QrFragment.openCamera%24feature_qr_release%28QrFragment.kt%3A9%29" title="Find more answers at support.mozilla.org!">Search Mozilla Support for this signature</a>
+ <a href=https://developer.mozilla.org/en-US/docs/Understanding_crash_reports title="MDN documentation about crash reports">How to read this crash report</a>
+ </div>
+ <div id=report-header-details>
+ ID: <code>4f5052b1-676e-4561-9c8e-c56030200611</code><br>
+ Signature: <code>java.lang.IllegalStateException: at mozilla.components.feature.qr.QrFragment.openCamera$feature_qr_release(QrFragment.kt:9)</code>
+ </div>
+ 
+ <div id=report-index class="no-border ui-tabs ui-widget ui-widget-content ui-corner-all">
+ <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role=tablist>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab ui-tabs-active ui-state-active" role=tab tabindex=0 aria-controls=details aria-labelledby=ui-id-1 aria-selected=true aria-expanded=true>
+ <a href=#details class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-1><span>Details</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=metadata aria-labelledby=ui-id-2 aria-selected=false aria-expanded=false>
+ <a href=#metadata class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-2><span>Metadata</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=bugzilla aria-labelledby=ui-id-3 aria-selected=false aria-expanded=false>
+ <a href=#bugzilla class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-3><span>Bugzilla</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=modules aria-labelledby=ui-id-4 aria-selected=false aria-expanded=false>
+ <a href=#modules class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-4><span>Modules</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=rawdump aria-labelledby=ui-id-5 aria-selected=false aria-expanded=false>
+ <a href=#rawdump class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-5><span>Raw Data and Minidumps</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=extensions aria-labelledby=ui-id-6 aria-selected=false aria-expanded=false>
+ <a href=#extensions class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-6><span>Extensions</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=telemetryenvironment aria-labelledby=ui-id-7 aria-selected=false aria-expanded=false>
+ <a href=#telemetryenvironment class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-7><span>Telemetry Environment</span></a>
+ </li>
+ <li class="ui-state-default ui-corner-top ui-tabs-tab ui-tab" role=tab tabindex=-1 aria-controls=correlation aria-labelledby=ui-id-8 aria-selected=false aria-expanded=false>
+ <a href=#correlation class=ui-tabs-anchor role=presentation tabindex=-1 id=ui-id-8><span>Correlations</span></a>
+ </li>
+ 
+ </ul>
+ <div id=details class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby=ui-id-1 role=tabpanel aria-hidden=false>
+ <table class="record data-table vertical hardwrapped">
+ <tbody>
+ 
+ <tr title='This is the field most commonly used for aggregating individual crash reports into a group. It usually contains one or more stack frames from the crashing thread. The stack frames may also be augmented or replaced with other tokens such as "OOM | small" or "shutdownhang" that further identify the crash kind. Search: signature'>
+ <th scope=row>Signature</th>
+ <td>
+ java.lang.IllegalStateException: at mozilla.components.feature.qr.QrFragment.openCamera$feature_qr_release(QrFragment.kt:9)
+ <a href="https://crash-stats.mozilla.org/signature/?product=Fenix&amp;signature=java.lang.IllegalStateException%3A%20at%20mozilla.components.feature.qr.QrFragment.openCamera%24feature_qr_release%28QrFragment.kt%3A9%29" class=sig-overview title="View more reports of this type">More Reports</a>
+ <a href="https://crash-stats.mozilla.org/search/?product=Fenix&amp;signature=%3Djava.lang.IllegalStateException%3A%20at%20mozilla.components.feature.qr.QrFragment.openCamera%24feature_qr_release%28QrFragment.kt%3A9%29" class=sig-search title="Search for more reports of this type">Search</a>
+ </td>
+ </tr>
+ <tr title="Unique identifier of the report. Search: uuid">
+ <th scope=row>UUID</th>
+ <td>4f5052b1-676e-4561-9c8e-c56030200611</td>
+ </tr>
+ <tr title="Date at which the crash report was received by Socorro. Search: date">
+ <th scope=row>Date Processed</th>
+ <td>
+ 
+ 2020-06-11 21:11:05 UTC
+ 
+ </td>
+ </tr>
+ 
+ <tr title="Length of time the process was running before it crashed. Small values (from 0 to 5 or so) usually indicate start-up crashes. Search: uptime">
+ <th scope=row>Uptime</th>
+ <td>
+ 11 seconds
+ </td>
+ </tr>
+ 
+ 
+ <tr title="Length of time since this version was installed. Search: install_age">
+ <th scope=row>Install Age</th>
+ <td>
+ 70 seconds since version was first installed <span class=humanized title="70 seconds since version was first installed">(1 minute and 10 seconds)</span>
+ </td>
+ </tr>
+ 
+ <tr title="Epoch time of when this version was installed. Commonly used as a unique identifier for software installations (since it is unlikely that two instances are installed at the very same second). Search: install_time">
+ <th scope=row>Install Time</th>
+ <td>
+ 
+ <time datetime=2020-06-11T21:09:54 class=jstime data-format="%Y-%m-%d %H:%M:%S">2020-06-11 21:09:54</time>
+ 
+ </td>
+ </tr>
+ 
+ <tr title="Name of the software. Search: product">
+ <th scope=row>Product</th>
+ <td>Fenix</td>
+ </tr>
+ <tr title="The update channel that the user is on. Typically 'nightly', 'aurora', 'beta', or 'release', but this may also be other values like 'release-cck-partner'. Search: release_channel">
+ <th scope=row>Release Channel</th>
+ <td>beta</td>
+ </tr>
+ <tr title='The product version number. A value lacking any letters indicates a normal release; a value with a "b" indicates a Beta release; a value with an "a" indicates an Aurora (a.k.a. Developer Edition) release; a value with "esr" indicates an Extended Service Release. Search: version'>
+ <th scope=row>Version</th>
+ <td>77.0.0-beta.2</td>
+ </tr>
+ <tr title="The unique build identifier of this version, which is a timestamp of the form YYYYMMDDHHMMSS. Search: build_id">
+ <th scope=row>Build ID</th>
+ <td>
+ 20200526221856
+ <span class=humanized>(<time datetime=2020-05-26T00:00:00 class=jstime data-format=%Y-%m-%d>2020-05-26</time>)</span>
+ <a href="https://buildhub.moz.tools/?q=20200526221856&amp;channel%5B0%5D=beta" class=sig-overview title="Buildhub data">Buildhub data</a>
+ </td>
+ </tr>
+ 
+ <tr title="A better platform name, including version for Windows and Mac OS X. Search: platform_pretty_version">
+ <th scope=row>OS</th>
+ <td>Unknown</td>
+ </tr>
+ <tr title="Version of the operating system. Search: platform_version">
+ <th scope=row>OS Version</th>
+ <td></td>
+ </tr>
+ 
+ <tr title="The Android version. Search: android_version">
+ <th scope=row>Android Version</th>
+ <td>
+ <pre>25 (REL)
+</pre>
+ </td>
+ </tr>
+ 
+ 
+ <tr title='The build architecture. Usually one of: "x86", "amd64" (a.k.a. x86-64), "arm", "arm64". Search: cpu_arch'>
+ <th scope=row>Build Architecture</th>
+ <td></td>
+ </tr>
+ <tr title="Detailed processor info. Usually contains information such as the family, model, and stepping number. Search: cpu_info">
+ <th scope=row>CPU Info</th>
+ <td>
+ 
+ </td>
+ </tr>
+ <tr title="Number of processor units in the CPU. Search: cpu_count">
+ <th scope=row>CPU Count</th>
+ <td>
+ 0
+ </td>
+ </tr>
+ 
+ <tr title="The Android device manufacturer. Search: android_manufacturer">
+ <th scope=row>Android Manufacturer</th>
+ <td>
+ <pre>Amlogic</pre>
+ </td>
+ </tr>
+ 
+ 
+ <tr title="The Android device model name. Search: android_model">
+ <th scope=row>Android Model</th>
+ <td>
+ <pre>X92_3GB</pre>
+ </td>
+ </tr>
+ 
+ 
+ <tr title="The graphics adapter vendor. This value is sometimes a name, and sometimes a hexidecimal identifier. Common identifiers include: 0x8086 (Intel), 0x1002 (AMD), 0x10de (NVIDIA). Search: adapter_vendor_id">
+ <th scope=row>Adapter Vendor ID</th>
+ <td>
+ 
+ <pre></pre>
+ 
+ </td>
+ </tr>
+ <tr title="The graphics adapter device identifier. Search: adapter_device_id">
+ <th scope=row>Adapter Device ID</th>
+ <td>
+ 
+ <pre></pre>
+ 
+ </td>
+ </tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <tr title="The crash's exception kind. Different OSes have different exception kinds. Examplevalues: &quot;EXCEPTION_ACCESS_VIOLATION_READ&quot;, &quot;EXCEPTION_BREAKPOINT&quot;, &quot;SIGSEGV&quot;. Search: reason">
+ <th scope=row>Crash Reason</th>
+ <td>None</td>
+ </tr>
+ <tr title="The crashing address. This value is only meaningful for crashes involving bad memory accesses. Search: address">
+ <th scope=row>Crash Address</th>
+ <td>None</td>
+ </tr>
+ 
+ 
+ <tr title="When Java code crashes due to an unhandled exception, this is the Java Stack Trace. It is usually more useful than the system stack trace given for the crashing thread. Search: java_stack_trace">
+ <th scope=row>Java Stack Trace (Redacted)</th>
+ <td>
+ <pre>java.lang.IllegalStateException
+	at mozilla.components.feature.qr.QrFragment.openCamera$feature_qr_release(QrFragment.kt:9)
+	at mozilla.components.feature.qr.QrFragment$surfaceTextureListener$1.onSurfaceTextureAvailable(QrFragment.kt:1)
+	at android.view.TextureView.getHardwareLayer(TextureView.java:390)
+	at android.view.TextureView.draw(TextureView.java:339)
+	at android.view.View.updateDisplayListIfDirty(View.java:16167)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.draw(View.java:17188)
+	at android.view.View.updateDisplayListIfDirty(View.java:16167)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at androidx.fragment.app.FragmentContainerView.drawChild(FragmentContainerView.java:4)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at androidx.fragment.app.FragmentContainerView.dispatchDraw(FragmentContainerView.java:4)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.updateDisplayListIfDirty(View.java:16162)
+	at android.view.View.draw(View.java:16951)
+	at android.view.ViewGroup.drawChild(ViewGroup.java:3727)
+	at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3513)
+	at android.view.View.draw(View.java:17188)
+	at com.android.internal.policy.DecorView.draw(DecorView.java:754)
+	at android.view.View.updateDisplayListIfDirty(View.java:16167)
+	at android.view.ThreadedRenderer.updateViewTreeDisplayList(ThreadedRenderer.java:648)
+	at android.view.ThreadedRenderer.updateRootDisplayList(ThreadedRenderer.java:654)
+	at android.view.ThreadedRenderer.draw(ThreadedRenderer.java:762)
+	at android.view.ViewRootImpl.draw(ViewRootImpl.java:2800)
+	at android.view.ViewRootImpl.performDraw(ViewRootImpl.java:2608)
+	at android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:2215)
+	at android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1254)
+	at android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6338)
+	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:874)
+	at android.view.Choreographer.doCallbacks(Choreographer.java:686)
+	at android.view.Choreographer.doFrame(Choreographer.java:621)
+	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:860)
+	at android.os.Handler.handleCallback(Handler.java:751)
+	at android.os.Handler.dispatchMessage(Handler.java:95)
+	at android.os.Looper.loop(Looper.java:154)
+	at android.app.ActivityThread.main(ActivityThread.java:6121)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:892)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:782)</pre>
+ </td>
+ </tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <tr title="No description for this field. Search: addons_checked">
+ <th scope=row>EMCheckCompatibility</th>
+ <td>
+ <pre>False</pre>
+ </td>
+ </tr>
+ 
+ 
+ 
+ 
+ <tr title="Notes of the Socorro processor, contains information about what changes were made to the report during processing. Search: processor_notes">
+ <th scope=row>Processor Notes</th>
+ <td>
+ <pre>processor_ip-172-31-14-143_us-west-2_compute_internal_7; ProcessorPipeline; non-integer value of "SecondsSinceLastCrash"; MDSW did not identify the crashing thread; exploitability information missing; no 'topmost_file' name because ''json_dump'' is missing; SignatureGenerationRule: JavaSignatureTool: stack trace line 1 is not in the expected format</pre>
+ </td>
+ </tr>
+ 
+ </tbody>
+ </table>
+ 
+ </div>
+ 
+ <div id=metadata class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-2 role=tabpanel style=display:none aria-hidden=true>
+ <table class="record data-table vertical hardwrapped">
+ 
+ </table>
+ </div>
+ 
+ <div id=bugzilla class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-3 role=tabpanel style=display:none aria-hidden=true>
+ <div class=bugreporter>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div id=modules class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-4 role=tabpanel style=display:none aria-hidden=true>
+ 
+ </div>
+ 
+ <div id=rawdump class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-5 role=tabpanel style=display:none aria-hidden=true>
+ <div class=code>No dump available</div>
+ <h3>Download Raw Crash Data and Minidumps</h3>
+ 
+ <p>
+ You are not signed in.
+ You need to be signed in and have access to protected data to see this.
+ See 
+ for more information.
+ </p>
+ 
+ </div>
+ 
+ <div id=extensions class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-6 role=tabpanel style=display:none aria-hidden=true>
+ 
+ <p>No extensions were installed.</p>
+ 
+ </div>
+ 
+ <div id=telemetryenvironment class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-7 role=tabpanel style=display:none aria-hidden=true>
+ 
+ <p>No telemetry environment data available.</p>
+ 
+ </div>
+ 
+ <div id=correlation class="ui-tabs-hide ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby=ui-id-8 role=tabpanel style=display:none aria-hidden=true>
+ <h3>Correlations for Fenix Beta</h3>
+ <pre>No correlation data available.</pre>
+ </div>
+ 
+ 
+ </div>
+ 
+ </div>
+ </div>
+ </div>
+ <div id=footer class=page-footer>
+ <div class=nav>
+ <div class=about>
+ <b>Mozilla Crash Reports</b> - Powered by <a href=https://github.com/mozilla-services/socorro>Socorro</a> - All dates are UTC
+ </div>
+ <ul>
+ <li><a href=https://www.mozilla.org/privacy/websites/>Privacy Policy</a></li>
+ <li><a href=https://github.com/mozilla-services/socorro/blob/master/CODE_OF_CONDUCT.md>Community Participation Guidelines</a></li>
+ </ul>
+</div>
+ <br class=clear>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
